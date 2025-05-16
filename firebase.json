@@ -1,0 +1,11 @@
+{
+  "hosting": [
+    {
+      "target": "autonome",
+      "source": ".",
+      "frameworksBackend": {
+        "region": "asia-east1"
+      }
+    }
+  ]
+}

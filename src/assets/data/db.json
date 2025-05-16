@@ -1,0 +1,268 @@
+{
+  "users": [
+    {
+      "id": "0",
+      "name": "Anshi Mitra",
+      "email": "anshi@gmail.com",
+      "password": "123456",
+      "role": 11,
+      "createdAt": "2021-07-23T10:53:16.385Z",
+      "updatedAt": "2021-07-23T10:53:16.385Z"
+    },
+    {
+      "id": "DgKk8MY0K2g5fYQSbXa8yIGQsP53",
+      "email": "aeromusgyan@gmail.com",
+      "name": "Gyan Prakash",
+      "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocLhGkNhDKMAEoR98IPGG4KwogAfCEibCYuG6X4GQpc14gcFkYDX=s96-c",
+      "role": 10,
+      "status": true,
+      "createdAt": "5/22/2024, 12:13:31 AM"
+    },
+    {
+      "id": "hyZNcuNTZUVdFPz2DcaFKfh4Z8x2",
+      "email": "sciaku1@gmail.com",
+      "name": "Sciaku",
+      "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocJINwbm5TxnyYKNQHTb4EkF6KeYhcYh9wGrGCxFpLT2AAcegHA=s96-c",
+      "status": true,
+      "role": 10,
+      "createdAt": "5/23/2024, 12:47:47 AM"
+    }
+  ],
+  "teams": [
+    {
+      "id": "0048",
+      "email": "aeromusgyan@gmail.com",
+      "projectId": "3dfb"
+    },
+    {
+      "id": "da3e",
+      "email": "sciaku1@gmail.com",
+      "projectId": "efeac5b2-4c83-4a85-a61d-19511b9a1813"
+    },
+    {
+      "id": "da3egd",
+      "email": "aeromusgyan@gmail.com",
+      "projectId": "efeac5b2-4c83-4a85-a61d-19511b9a1813"
+    },
+    {
+      "id": "da3egdda",
+      "email": "aeromusgyan@gmail.com",
+      "projectId": "91db1180-2c13-43b2-9d78-d11752d176f8"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Autonome - Project Management",
+      "url": "autonome-project-management",
+      "details": "Autonome - Project Management System",
+      "createdAt": "2024-05-21T18:16:16.847Z",
+      "status": "Start",
+      "tasks": [],
+      "deadline": "2024-05-25",
+      "progress": 0,
+      "member": [
+        "DgKk8MY0K2g5fYQSbXa8yIGQsP53"
+      ],
+      "leader": "DgKk8MY0K2g5fYQSbXa8yIGQsP53",
+      "id": "3dfb"
+    },
+    {
+      "id": "efeac5b2-4c83-4a85-a61d-19511b9a1813",
+      "title": "Autonome PMS",
+      "url": "autonome-pms",
+      "details": "Autonome PMS\n",
+      "createdAt": "2024-05-22T08:42:03.693Z",
+      "status": "Start",
+      "tasks": [],
+      "deadline": "2024-05-28",
+      "progress": 0,
+      "member": [
+        "DgKk8MY0K2g5fYQSbXa8yIGQsP53"
+      ],
+      "leader": "DgKk8MY0K2g5fYQSbXa8yIGQsP53",
+      "estimateCost": "50000"
+    },
+    {
+      "id": "91db1180-2c13-43b2-9d78-d11752d176f8",
+      "title": "PROJECT MANAGEMENT SYSTEM",
+      "url": "project-management-system",
+      "details": "PROJECT MANAGEMENT SYSTEM",
+      "createdAt": "2024-05-21T21:06:18.556Z",
+      "status": "Start",
+      "tasks": [],
+      "deadline": "2024-05-30",
+      "progress": 0,
+      "member": [
+        "DgKk8MY0K2g5fYQSbXa8yIGQsP53"
+      ],
+      "leader": "DgKk8MY0K2g5fYQSbXa8yIGQsP53",
+      "estimateCost": "25000"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "e6e4",
+      "title": "Create the PMS",
+      "status": "1",
+      "description": "Create the PMS",
+      "dueDate": "2024-05-25",
+      "projectId": "efeac5b2-4c83-4a85-a61d-19511b9a1813",
+      "teamId": "da3egd",
+      "cost": 1000
+    },
+    {
+      "id": "aeae",
+      "title": "Test the API",
+      "status": "2",
+      "description": "Test the API",
+      "assignedTo": "Gyan Prakash",
+      "labels": [],
+      "dueDate": "2024-05-26",
+      "columnId": "",
+      "cardId": "",
+      "comments": [],
+      "attachments": [],
+      "timeSpent": 0,
+      "timeEstimated": 0,
+      "members": [],
+      "subTasks": [],
+      "isSubTask": false,
+      "showSubTasks": false,
+      "parentTask": null,
+      "overridden": false,
+      "editable": false,
+      "removable": false,
+      "canAddSubTask": false,
+      "canRemove": false,
+      "canEdit": false,
+      "canDelete": false,
+      "tags": [],
+      "tagColors": [],
+      "checklistItems": [],
+      "projectId": "91db1180-2c13-43b2-9d78-d11752d176f8"
+    },
+    {
+      "id": "8fcd",
+      "title": "Add Header",
+      "status": "3",
+      "description": "Add Header",
+      "assignedTo": "Gyan Prakash",
+      "labels": [],
+      "dueDate": "2024-05-26",
+      "columnId": "",
+      "cardId": "",
+      "comments": [],
+      "attachments": [],
+      "timeSpent": 0,
+      "timeEstimated": 0,
+      "members": [],
+      "subTasks": [],
+      "isSubTask": false,
+      "showSubTasks": false,
+      "parentTask": null,
+      "overridden": false,
+      "editable": false,
+      "removable": false,
+      "canAddSubTask": false,
+      "canRemove": false,
+      "canEdit": false,
+      "canDelete": false,
+      "tags": [],
+      "tagColors": [],
+      "checklistItems": [],
+      "projectId": "91db1180-2c13-43b2-9d78-d11752d176f8"
+    },
+    {
+      "id": "f83b",
+      "title": "Create Login Page",
+      "status": "1",
+      "description": "Create Login Page",
+      "assignedTo": "Anshi Mitra",
+      "labels": [],
+      "dueDate": "2024-05-24",
+      "columnId": "",
+      "cardId": "",
+      "comments": [],
+      "attachments": [],
+      "timeSpent": 0,
+      "timeEstimated": 0,
+      "members": [],
+      "subTasks": [],
+      "isSubTask": false,
+      "showSubTasks": false,
+      "parentTask": null,
+      "overridden": false,
+      "editable": false,
+      "removable": false,
+      "canAddSubTask": false,
+      "canRemove": false,
+      "canEdit": false,
+      "canDelete": false,
+      "tags": [],
+      "tagColors": [],
+      "checklistItems": [],
+      "projectId": "91db1180-2c13-43b2-9d78-d11752d176f8"
+    },
+    {
+      "id": "932e",
+      "title": "Login Page",
+      "status": "2",
+      "description": "Login Page",
+      "dueDate": "2024-05-25",
+      "projectId": "efeac5b2-4c83-4a85-a61d-19511b9a1813",
+      "teamId": "da3e",
+      "cost": 1000
+    },
+    {
+      "id": "5bec",
+      "title": "Login Page",
+      "status": "3",
+      "description": "Login Page",
+      "dueDate": "2024-05-25",
+      "projectId": "efeac5b2-4c83-4a85-a61d-19511b9a1813",
+      "teamId": "da3egd",
+      "cost": 1000
+    },
+    {
+      "id": "2fda",
+      "title": "Create Project Card",
+      "status": "1",
+      "description": "Create Project Card",
+      "dueDate": "2024-05-25",
+      "projectId": "efeac5b2-4c83-4a85-a61d-19511b9a1813",
+      "teamId": "da3egd",
+      "cost": 1000
+    },
+    {
+      "id": "c416",
+      "title": "hfgfcfh",
+      "status": "Start",
+      "description": "",
+      "assignedTo": "",
+      "labels": [],
+      "dueDate": "2024-06-01T04:37:30.165Z",
+      "columnId": "",
+      "cardId": "",
+      "comments": [],
+      "attachments": [],
+      "timeSpent": 0,
+      "timeEstimated": 0,
+      "members": [],
+      "subTasks": [],
+      "isSubTask": false,
+      "showSubTasks": false,
+      "parentTask": null,
+      "overridden": false,
+      "editable": false,
+      "removable": false,
+      "canAddSubTask": false,
+      "canRemove": false,
+      "canEdit": false,
+      "canDelete": false,
+      "tags": [],
+      "tagColors": [],
+      "checklistItems": [],
+      "projectId": "3dfb"
+    }
+  ]
+}

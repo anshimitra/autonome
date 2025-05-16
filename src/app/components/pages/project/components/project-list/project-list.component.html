@@ -1,0 +1,29 @@
+<!-- project-list.component.html -->
+<div class="container mx-auto px-4 py-8">
+  <a routerLink="/project/new/create" class="btn btn-primary">
+    <button
+      class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full"
+    >
+      Add Project
+    </button>
+  </a>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+    @for (project of projects; track $index) {
+    <app-project-card
+      [project]="project"
+      (onDelete)="onDelete($event)"
+      (onEdit)="onEdit($event)"
+    ></app-project-card>
+    }
+  </div>
+</div>
+
+<!-- <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-2 my-5">
+  @for (project of projects; track $index) {
+  <app-project-card
+    [project]="project"
+    (onDelete)="onDelete($event)"
+    (onEdit)="onEdit($event)"
+  ></app-project-card>
+  }
+</div> -->

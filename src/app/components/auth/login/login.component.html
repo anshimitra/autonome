@@ -1,0 +1,106 @@
+
+
+<div class="card flex justify-content-center">
+  <p-toast
+  [life]="3000"
+  [showTransformOptions]="'translateY(100%)'"
+  [showTransformOptions]="'translateX(100%)'"
+  />
+</div>
+<div
+  class="flex justify-center items-cente bg-slate-300 h-[680px] dark:bg-slate-900"
+>
+  <div
+    class="h-[200px] w-[400px] bg-slate-100 dark:bg-slate-700 rounded-md mt-11"
+  >
+    <div class="py-10">
+      <a routerLink="/">
+        <app-logo></app-logo>
+      </a>
+    </div>
+    <div hidden class="flex justify-center items-center flex-col mx-2">
+      <button
+        class="bg-white w-full rounded-lg p-3 mx-2"
+        (click)="signInWithGoogle()"
+      >
+        <div class="flex items-center justify-center">
+          <img
+            class="w-5 h-5 mr-2"
+            src="../../../../assets/google icon.png"
+            alt=""
+          />
+          <span>Sign In With Google</span>
+        </div>
+      </button>
+      <form action="/">
+        <!-- <label class="block pb-3">
+          <span
+            class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700 dark:text-white"
+            >Email</span
+          >
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="email"
+            placeholder="xyz@gmail.com"
+            class="px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-[311px] rounded-md sm:text-sm focus:ring-1"
+          />
+        </label>
+        <div *ngIf="this.email.length != 0">
+          <p *ngIf="email.search('@') == -1" class="text-red-700">
+            Email is invalid
+          </p>
+        </div> -->
+
+        <!-- <label class="block pb-3">
+          <span
+            class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700 dark:text-white"
+            >Password</span
+          >
+          <input
+            type="password"
+            name="password"
+            [(ngModel)]="password"
+            placeholder="Enter your password"
+            class="px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-[311px] rounded-md sm:text-sm focus:ring-1"
+          />
+          <i id="togglepassword" class="fa fa-eye password-icon"></i>
+        </label> -->
+        <!-- {{this.password.length}} -->
+        <!-- <div *ngIf="this.password.length != 0">
+          <p *ngIf="this.password.length < 6" class="text-red-700">
+            Password is too small
+          </p>
+        </div> -->
+        <!-- <a routerLink="/project">
+          <button
+            [disabled]="email.search('@') == -1 && this.password.length < 6"
+            class="mb-3 rounded-md w-[311px] h-9 text-white bg-indigo-600 hover:bg-blue-400 font-semibold mt-5"
+            (click)="clickHandler()"
+          >
+            Login
+          </button>
+        </a> -->
+      </form>
+      <!-- create a forgot password -->
+      <!-- <a
+        [routerLink]="['/forget']"
+        routerLinkActive="router-link-active"
+        class="mb-3 flex justify-start items-start cursor-pointer text-sm font-medium text-sky-600 hover:text-sky-800"
+        >Forget your password?</a
+      > -->
+
+      <!-- create a don't have an account -->
+      <!-- <a
+        routerLink="/signup"
+        routerLinkActive="router-link-active"
+        class="mb-3 inline-flex items-center cursor-pointer text-base font-semibold text-indigo- 600 hover:text-indigo-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset focus:ring-indigo-500"
+        >Don’t have an account? &nbsp;<span
+          class="text-blue-500 hover:text-blue-600"
+        >
+          Signup</span
+        >
+      </a> -->
+    </div>
+  </div>
+</div>

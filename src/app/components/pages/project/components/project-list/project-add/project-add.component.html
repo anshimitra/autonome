@@ -1,0 +1,125 @@
+<!-- project-form.component.html -->
+<div class="max-w-md mx-auto p-4 bg-white rounded shadow-md">
+  <h1 class="text-xl font-bold text-gray-700">Add Projects</h1>
+  <form [formGroup]="projectForm" (ngSubmit)="add()">
+    <!-- Project Name -->
+    <div class="mb-4">
+      <label
+        for="project-name"
+        class="block text-sm font-medium leading-6 text-gray-700"
+        >Enter Project Name</label
+      >
+      <div class="mt-2">
+        <input
+          type="text"
+          name="project-name"
+          id="project-name"
+          formControlName="title"
+          autocomplete="given-name"
+          class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        />
+      </div>
+      <div
+        *ngIf="
+          projectForm.get('title')?.invalid && projectForm.get('title')?.touched
+        "
+        class="text-red-500 text-sm mt-2"
+      >
+        Project Name is required.
+      </div>
+    </div>
+
+    <!-- Project Details -->
+    <div class="mb-4">
+      <label
+        for="project-detail"
+        class="block text-sm font-medium leading-6 text-gray-700"
+        >Enter Project Details</label
+      >
+      <div class="mt-2">
+        <textarea
+          name="project-detail"
+          id="project-detail"
+          rows="3"
+          formControlName="details"
+          autocomplete="given-name"
+          class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        ></textarea>
+      </div>
+      <div
+        *ngIf="
+          projectForm.get('details')?.invalid &&
+          projectForm.get('details')?.touched
+        "
+        class="text-red-500 text-sm mt-2"
+      >
+        Project Details are required.
+      </div>
+    </div>
+    <div class="mb-4">
+      <label
+        for="estimateCost"
+        class="block text-sm font-medium leading-6 text-gray-700"
+        >Enter Project Estimate cost</label
+      >
+      <div class="mt-2">
+        <input
+          type="text"
+          name="estimateCost"
+          id="estimateCost"
+          formControlName="estimateCost"
+          autocomplete="false"
+          class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        />
+      </div>
+      <div
+        *ngIf="
+          projectForm.get('estimateCost')?.invalid && projectForm.get('estimateCost')?.touched
+        "
+        class="text-red-500 text-sm mt-2"
+      >
+        Estimate cost is required.
+      </div>
+    </div>
+    <!-- Deadline -->
+    <div class="mb-4">
+      <label
+        for="deadline"
+        class="block text-sm font-medium leading-6 text-gray-700"
+        >Deadline</label
+      >
+      <input
+        id="deadline"
+        type="date"
+        formControlName="deadline"
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      />
+      <div
+        *ngIf="
+          projectForm.get('deadline')?.invalid &&
+          projectForm.get('deadline')?.touched
+        "
+        class="text-red-500 text-sm mt-2"
+      >
+        Deadline is required.
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="flex items-center justify-between">
+      <button
+        class="bg-green-500 hover:bg-green-600 text-white font-bold my-3 py-2 px-4 rounded-full"
+        [disabled]="projectForm.invalid"
+      >
+        Add Project
+      </button>
+      <!-- <button
+        type="submit"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        [disabled]="projectForm.invalid"
+      >
+        Submit
+      </button> -->
+    </div>
+  </form>
+</div>

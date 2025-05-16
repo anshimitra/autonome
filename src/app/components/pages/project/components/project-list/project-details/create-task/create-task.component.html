@@ -1,0 +1,80 @@
+
+  <form
+    [formGroup]="taskForm"
+    (ngSubmit)="onSubmit()"
+    class="space-y-2 bg-white text-black p-8 rounded shadow-md max-w-3xl mx-auto my-2"
+  >
+  <h1 class="text-xl font-bold text-gray-700">Add Task</h1>
+    <div class="flex flex-col">
+      <label for="title" class="mb-2 font-semibold">Title</label>
+      <input
+        type="text"
+        id="title"
+        formControlName="title"
+        class="form-input p-2 border rounded border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+      />
+    </div>
+
+    <div class="flex flex-col">
+      <label for="description" class="mb-2 font-semibold">Description</label>
+      <textarea
+        id="description"
+        formControlName="description"
+        class="form-textarea p-2 border rounded border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+        rows="3"
+      ></textarea>
+    </div>
+    <div class="flex flex-col">
+      <label for="cost" class="mb-2 font-semibold">Task Cost (Optional)</label>
+      <input
+        type="number"
+        id="cost"
+        formControlName="cost"
+        class="form-input p-2 border rounded border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+      />
+    </div>
+    <div class="flex flex-col">
+      <label for="assignedTo" class="mb-2 font-semibold">Assign To</label>
+      <select
+        id="assignedTo"
+        formControlName="assignedTo"
+        class="form-select p-2 border rounded border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+      >
+      @for (team of teams; track $index) {
+        <option [value]="team.id">
+          {{ team.email }}
+        </option>
+        }
+      </select>
+    </div>
+
+    <div class="flex flex-col">
+      <label for="dueDate" class="mb-2 font-semibold">Due Date</label>
+      <input
+        type="date"
+        id="dueDate"
+        formControlName="dueDate"
+        class="form-input p-2 border rounded border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+      />
+    </div>
+
+    <div class="flex flex-col">
+      <label for="status" class="mb-2 font-semibold">Status</label>
+      <select
+        formControlName="status"
+        class="form-select p-2 border rounded border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+      >
+        <option [value]="0">Todo</option>
+        <option [value]="1">In Progress</option>
+        <option [value]="2">In Review</option>
+        <option [value]="3">Completed</option>
+      </select>
+    </div>
+
+    <button
+      type="submit"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-200 ease-in-out"
+    >
+      Submit
+    </button>
+  </form>

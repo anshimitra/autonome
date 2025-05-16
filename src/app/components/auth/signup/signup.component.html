@@ -1,0 +1,89 @@
+<div
+  class="flex justify-center items-center bg-slate-300 h-[690px] dark:bg-slate-900"
+>
+  <form
+    method="post"
+    class="h-[600px] w-[400px] bg-slate-100 dark:bg-slate-700 rounded-md mt-11"
+  >
+    <div class="py-10">
+      <a routerLink="/">
+        <app-logo></app-logo>
+      </a>
+    </div>
+    <div class="flex justify-center items-center flex-col">
+      <label class="block pb-3">
+        <span
+          class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700 dark:text-white"
+          >First Name</span
+        >
+        <input
+          type="text"
+          name="firstName"
+          placeholder="Enter your firstname"
+          class="px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-[311px] rounded-md sm:text-sm focus:ring-1"
+        />
+      </label>
+      <label class="block pb-3">
+        <span
+          class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700 dark:text-white"
+          >Last Name</span
+        >
+        <input
+          type="text"
+          name="lastName"
+          placeholder="Enter your lastname"
+          class="px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-[311px] rounded-md sm:text-sm focus:ring-1"
+        />
+      </label>
+      <label class="block pb-3">
+        <span
+          class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700 dark:text-white"
+          >Email</span
+        >
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email id"
+          class="px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-[311px] rounded-md sm:text-sm focus:ring-1"
+        />
+      </label>
+      <label class="block pb-3">
+        <span
+          class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700 dark:text-white"
+          >Password</span
+        >
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+          class="px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-[311px] rounded-md sm:text-sm focus:ring-1"
+        />
+      </label>
+
+      <button
+        class="mb-3 rounded-md w-[311px] h-9 text-white bg-indigo-600 hover:bg-blue-400 font-semibold mt-5"
+      >
+        Signup
+      </button>
+
+      <!-- create a forgot password -->
+      <a
+        [routerLink]="['/forget']"
+        routerLinkActive="router-link-active"
+        class="mb-3 flex justify-start items-start cursor-pointer text-sm font-medium text-sky-600 hover:text-sky-800"
+        >Forget your password?</a
+      >
+      <!-- create a don't have an account -->
+      <a
+        routerLink="/login"
+        routerLinkActive="router-link-active"
+        class="mb-3 inline-flex items-center cursor-pointer text-base font-semibold text-indigo- 600 hover:text-indigo-900 focus:outline-none focus:ring-2 focus:ring-offset focus:ring-indigo-500 dark:text-white"
+        >Don’t have an account? &nbsp;<span
+          class="text-blue-500 hover:text-blue-600"
+        >
+          Login</span
+        >
+      </a>
+    </div>
+  </form>
+</div>

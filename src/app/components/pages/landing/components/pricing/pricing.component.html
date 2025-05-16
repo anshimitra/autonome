@@ -1,0 +1,62 @@
+<main class="py-16">
+  <section class="bg-white text-center py-16">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Pricing</h1>
+      <p class="text-xl text-gray-600 mb-8">Choose a plan that fits your needs and budget.</p>
+    </div>
+  </section>
+
+  <!-- Pricing Plans Section -->
+  <section class="bg-gray-100 py-16">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Basic Plan</h3>
+        <p class="text-gray-600 mb-6">Great for small teams and startups.</p>
+        <div class="text-4xl font-bold mb-4">{{'49' | currency:'INR'}}</div>
+        <p class="text-gray-600 mb-6">per user, per month</p>
+        <ul class="text-left mb-6">
+          <li class="mb-2">10 Projects</li>
+          <li class="mb-2">100 Tasks</li>
+          <li class="mb-2">5 GB Storage</li>
+          <li class="mb-2">Basic Support</li>
+        </ul>
+        <button [routerLink]="['/login']" routerLinkActive="router-link-active"  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-200 ease-in-out">
+          Sign Up
+        </button>
+      </div>
+
+      <div class="bg-white p-8 rounded shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Pro Plan</h3>
+        <p class="text-gray-600 mb-6">Perfect for growing teams and businesses.</p>
+        <div class="text-4xl font-bold mb-4">{{'99' | currency:'INR'}}</div>
+        <p class="text-gray-600 mb-6">per user, per month</p>
+        <ul class="text-left mb-6">
+          <li class="mb-2">Unlimited Projects</li>
+          <li class="mb-2">Unlimited Tasks</li>
+          <li class="mb-2">50 GB Storage</li>
+          <li class="mb-2">Priority Support</li>
+        </ul>
+        <button [routerLink]="['/login']" routerLinkActive="router-link-active"  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-200 ease-in-out">
+          Sign Up
+        </button>
+      </div>
+
+      <div class="bg-white p-8 rounded shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Enterprise Plan</h3>
+        <p class="text-gray-600 mb-6">Best for large organizations.</p>
+        <div class="text-4xl font-bold mb-4">{{'999' | currency:'INR'}}</div>
+        <p class="text-gray-600 mb-6">per user, per month</p>
+        <ul class="text-left mb-6">
+          <li class="mb-2">Unlimited Projects</li>
+          <li class="mb-2">Unlimited Tasks</li>
+          <li class="mb-2">Unlimited Storage</li>
+          <li class="mb-2">Dedicated Support</li>
+        </ul>
+        <button [routerLink]="['/contact-us']" routerLinkActive="router-link-active"  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-200 ease-in-out">
+          Contact Sales
+        </button>
+      </div>
+    </div>
+  </section>
+
+</main>

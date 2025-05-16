@@ -1,0 +1,12 @@
+
+@if (auth.user.email === email) {
+  <!-- show success message to successfully accept invitation in project -->
+  <div class="text-center text-green-500" role="alert">
+    <p [innerHTML]="message"></p>
+  </div>
+}@else {
+  <!-- show error not login with same email -->
+  <p class="text-red-500 text-center">
+    <strong>Oops!</strong> You are not logged in with this <strong>{{email}}</strong>.
+  </p>
+}

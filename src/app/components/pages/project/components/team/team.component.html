@@ -1,0 +1,25 @@
+<!-- components/project-members/project-members.component.html -->
+<div class="container mx-auto p-4">
+  <h1 class="text-3xl font-bold mb-6">Project Team Members</h1>
+  <div
+    class="w-full flex flex-col sm:flex-row justify-center bg-white rounded-lg shadow-md mb-6 p-4"
+  >
+    <div class="w-full sm:w-[65%]">
+      <div
+        class="flex flex-row justify-between text-red-700 font-bold bg-gray-300 rounded-lg shadow-md p-4"
+      >
+        <p>Name</p>
+        <p>Assigned Tasks</p>
+      </div>
+      @for (team of teams; track $index) {
+      <app-team-card [team]="team"></app-team-card>
+      }
+    </div>
+    <div
+      class="w-full sm:w-[35%] p-2 m-2 bg-gray-600 h-full rounded-lg shadow-md"
+    >
+      <p class="text-2xl font-bold mb-6">Assigned Tasks</p>
+      <router-outlet />
+    </div>
+  </div>
+</div>

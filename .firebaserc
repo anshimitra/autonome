@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "autonome-39c1d": {
+      "hosting": {
+        "autonome": [
+          "autonome-39c1d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "autonome-39c1d"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "routes": [
+    "/",
+    "/about-us",
+    "/admin",
+    "/contact-us",
+    "/features",
+    "/forget",
+    "/login",
+    "/pricing",
+    "/project",
+    "/project/accept-invite",
+    "/project/dashboard",
+    "/project/details",
+    "/project/new/create",
+    "/project/notification",
+    "/project/portfolio",
+    "/project/profile",
+    "/project/task/create",
+    "/project/team",
+    "/project/team/invite",
+    "/project/time",
+    "/signup"
+  ]
+}

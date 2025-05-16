@@ -1,0 +1,28 @@
+<!-- project-card.component.html -->
+<div class="max-w-sm rounded overflow-hidden shadow-lg bg-white p-4 m-4">
+  <div class="px-6 py-4">
+    <div role="button" (click)="onProjectClick(project)">
+      <div class="font-bold text-xl mb-2 text-black">{{ project.title }}</div>
+      <p class="text-gray-700 text-base">
+        {{ project.details }}
+      </p>
+      <p class="text-gray-600 text-sm mt-4">
+        <strong>Deadline:</strong> {{ project.deadline }}
+      </p>
+    </div>
+    <div class="flex justify-end mt-4">
+      <button
+        (click)="onEdit.emit(project.id)"
+        class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded mr-2"
+      >
+        Edit
+      </button>
+      <button
+        (click)="onDelete.emit(project.id)"
+        class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>

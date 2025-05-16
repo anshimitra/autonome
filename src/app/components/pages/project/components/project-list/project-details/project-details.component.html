@@ -1,0 +1,118 @@
+@if (project) {
+<div class="p-4 bg-white shadow-md rounded-lg">
+  <div class="flex flex-col justify-between mt-4">
+    <div class="flex justify-between items-center">
+      <div class="text-2xl font-bold text-gray-800">
+        {{ project.title | uppercase }}
+      </div>
+      <div class="flex justify-between items-center">
+        <span class="text-sm text-red-500 px-5">
+          <strong>{{ getRemainingDays(project) }}</strong> Remaining</span
+        >
+        <a
+          routerLink="/project/team/invite"
+          [queryParams]="{ projectId: project.id }"
+          class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded"
+        >
+          Invite Member
+        </a>
+      </div>
+    </div>
+    <div class="flex justify-between items-center pt-3">
+      <p class="text-gray-600">{{ project.details }}</p>
+      <span class="text-sm text-gray-500"
+        >Estimate Costs:
+        <strong class="text-red-500">{{
+          project.estimateCost | currency : "INR"
+        }}</strong>
+        /
+        <strong class="text-green-500">
+          {{ getCurrentCosts(project.tasks) | currency : "INR" }}</strong
+        ></span
+      >
+    </div>
+
+    <div class="flex justify-between items-center mt-4">
+      <span class="text-sm text-red-500"
+        >Deadline: {{ project.deadline | date }}</span
+      >
+      <button
+        class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+        (click)="navigateToAddTask(project.id)"
+      >
+        Add Task
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-4 gap-0 mt-3 rounded-2xl border-0 bg-gray-800 text-black h-[100%]">
+  @for (column of taskColumns; track $index) {
+  <div class="p-4 rounded-2xl border border-gray-300">
+    <div [ngClass]="getTaskTypeColor(column.key)"
+      class="text-xl font-semibold cursor-pointer "
+    >
+      {{ column.name }}
+    </div>
+    <hr class="bg-white" />
+    <div class="text-gray-400 rounded mt-2">
+      <form (ngSubmit)="addTask($index)">
+        @if (isShow == $index){
+        <input
+          type="text"
+          class="w-full p-2 border border-gray-300 position-relative"
+          placeholder="Enter a task name"
+          [(ngModel)]="taskNames[$index]"
+          [ngModelOptions]="{ standalone: true }"
+          (blur)="onAdd($index)"
+        />
+        }@else {
+        <button
+          type="submit"
+          (click)="onAdd($index)"
+          class="w-full mt-2 py-2 px-4 bg-blue-500 text-white rounded position-absolute end-0"
+        >
+          <i class="ri-add-large-line"></i>
+        </button>
+        }
+        <!-- add icon  -->
+      </form>
+    </div>
+    <!-- Task list -->
+    @for (task of project.tasks | tasks: column.key; track $index) {
+    <div class="mt-4 shadow-lg bg-white">
+      <div class="p-2 flex flex-col sm:flex-row justify-between items-center border-b border-gray-300"
+      >
+        <div class="flex-1" (click)="editTask(task.id!)" role="button">
+          <div [ngClass]="getTaskTypeColor(task.status)" class="font-bold">
+            {{ task.title }}
+          </div>
+          <div class="text-sm">{{ task.description }}</div>
+        </div>
+        <div class="flex items-center">
+          <button
+            class="text-blue-500 hover:text-blue-700 mr-2"
+            (click)="editTask(task.id!)"
+          >
+            <i class="ri-edit-box-line"></i>
+          </button>
+          @if (auth.user.id === project.leader) {
+            <button
+              class="text-red-500 hover:text-red-700"
+              (click)="deleteTask(task.id!)"
+            >
+              <i class="ri-delete-bin-5-line"></i>
+            </button>
+          }
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+  }
+</div>
+} @else {
+  <div class="flex flex-col items-center justify-center h-screen">
+    <h1 class="text-2xl font-bold text-gray-700">No project found</h1>
+  </div>
+}

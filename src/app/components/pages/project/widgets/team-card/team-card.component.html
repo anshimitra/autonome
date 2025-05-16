@@ -1,0 +1,5 @@
+<a class="p-2 mb-1 rounded-lg shadow-md flex flex-row justify-between bg-gray-600 text-white font-medium"
+   routerLink="/project/team" [queryParams]="{projectId: team.projectId, teamId: team.id}">
+  <p>{{ team.email }}</p>
+  <p>{{ team.tasks?.length }}</p>
+</a>
